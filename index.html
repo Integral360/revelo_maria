@@ -87,8 +87,8 @@ margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius
 
 .track img:hover{transform:scale(1.12)}
 
-.row-left .track{animation:scrollLeft 18s linear infinite}
-.row-right .track{animation:scrollRight 18s linear infinite}
+.row-left .track{animation:scrollLeft 26s linear infinite}
+.row-right .track{animation:scrollRight 26s linear infinite}
 
 @keyframes scrollLeft{
   0%{transform:translateX(0)}
@@ -106,7 +106,11 @@ margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius
 }
 
 /* CTA */ */
-.cta{text-align:center;padding:60px}
+.cta{text-align:center;padding:60px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+.cta h2{margin-bottom:15px}
+
+.cta a{margin-top:10px}
 
 .cta a{
 padding:15px 35px;border-radius:30px;background:#ff3ea5;color:#fff;text-decoration:none}
