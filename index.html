@@ -68,27 +68,44 @@ margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius
 .bio{padding:60px 20px;text-align:center;max-width:800px;margin:auto;font-size:1.1em;line-height:1.8}
 
 /* GALERIA PREMIUM */
-.slider{overflow:hidden}
-.track{display:flex;gap:15px;animation:scroll 30s linear infinite}
+.slider{overflow:hidden;padding:20px 0}
+.row{overflow:hidden;white-space:nowrap;margin:15px 0}
+.track{
+  display:flex;
+  gap:15px;
+  width:max-content;
+}
 
 .track img{
-width:250px;height:350px;object-fit:cover;border-radius:20px;
-transition:.4s;animation:zoom 8s infinite alternate;
+  width:240px;
+  height:340px;
+  object-fit:cover;
+  border-radius:20px;
+  animation:zoom 6s infinite alternate;
+  transition:.4s;
 }
 
 .track img:hover{transform:scale(1.12)}
 
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
+.row-left .track{animation:scrollLeft 18s linear infinite}
+.row-right .track{animation:scrollRight 18s linear infinite}
+
+@keyframes scrollLeft{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+@keyframes scrollRight{
+  0%{transform:translateX(-50%)}
+  100%{transform:translateX(0)}
 }
 
 @keyframes zoom{
-0%{transform:scale(1)}
-100%{transform:scale(1.1)}
+  0%{transform:scale(1)}
+  100%{transform:scale(1.12)}
 }
 
-/* CTA */
+/* CTA */ */
 .cta{text-align:center;padding:60px}
 
 .cta a{
@@ -131,10 +148,21 @@ Disponible para colaboraciones y publicidad 💌
 </section>
 
 <section class="slider">
+
+<div class="row row-left">
 <div class="track">
 <img src="foto2.jpeg"><img src="foto3.jpeg"><img src="foto4.jpeg"><img src="foto5.jpeg"><img src="foto6.jpeg"><img src="foto7.jpeg"><img src="foto8.jpeg"><img src="foto9.jpeg"><img src="foto10.jpeg"><img src="foto11.jpeg">
 <img src="foto2.jpeg"><img src="foto3.jpeg"><img src="foto4.jpeg"><img src="foto5.jpeg"><img src="foto6.jpeg"><img src="foto7.jpeg"><img src="foto8.jpeg"><img src="foto9.jpeg"><img src="foto10.jpeg"><img src="foto11.jpeg">
 </div>
+</div>
+
+<div class="row row-right">
+<div class="track">
+<img src="foto2.jpeg"><img src="foto3.jpeg"><img src="foto4.jpeg"><img src="foto5.jpeg"><img src="foto6.jpeg"><img src="foto7.jpeg"><img src="foto8.jpeg"><img src="foto9.jpeg"><img src="foto10.jpeg"><img src="foto11.jpeg">
+<img src="foto2.jpeg"><img src="foto3.jpeg"><img src="foto4.jpeg"><img src="foto5.jpeg"><img src="foto6.jpeg"><img src="foto7.jpeg"><img src="foto8.jpeg"><img src="foto9.jpeg"><img src="foto10.jpeg"><img src="foto11.jpeg">
+</div>
+</div>
+
 </section>
 
 <section class="cta">
