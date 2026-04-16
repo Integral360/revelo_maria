@@ -47,22 +47,48 @@ h1{font-size:3em;margin:15px 0}
 .tag{opacity:.85;font-size:1.1em}
 
 /* BOTONES */
-.buttons a{
-display:inline-block;margin:10px;padding:14px 25px;
-border-radius:30px;
-background:linear-gradient(135deg,#ff3ea5,#ff7a59);
-color:#fff;text-decoration:none;
-font-weight:600;
-transition:.3s;
+.buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:14px;
+flex-wrap:wrap;
 }
 
-.buttons a:hover{transform:scale(1.08)}
+.buttons-top{
+margin-top:22px;
+}
+
+.buttons-bottom{
+margin-top:14px;
+}
+
+.buttons a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+min-width:155px;
+padding:14px 24px;
+border-radius:30px;
+background:linear-gradient(135deg,#ff3ea5,#ff7a59);
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+box-shadow:0 10px 24px rgba(255,62,165,.22);
+}
+
+.buttons a:hover{transform:scale(1.05)}
+
+.btn-whatsapp{
+min-width:210px;
+background:linear-gradient(135deg,#25d366,#18b458) !important;
+box-shadow:0 10px 24px rgba(37,211,102,.24) !important;
+}
 
 /* SOCIAL ICONS */
-.social a{
-margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius:50%;transition:.3s}
-
-.social a:hover{background:#ff3ea5;transform:translateY(-5px)}
+.social{display:none;}
 
 /* BIO */
 .bio{padding:60px 20px;text-align:center;max-width:800px;margin:auto;font-size:1.1em;line-height:1.8}
@@ -108,9 +134,9 @@ margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius
 /* CTA */ */
 .cta{
   width:100%;
-  max-width:900px;
+  max-width:980px;
   margin:0 auto;
-  padding:70px 20px 80px;
+  padding:76px 20px 88px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -120,16 +146,38 @@ margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius
 
 .cta h2{
   width:100%;
-  margin:0 0 18px;
+  margin:0 0 22px;
   text-align:center;
   font-size:2.2rem;
 }
 
-.cta a{
+.cta-actions{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.cta-main{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  margin:0 auto;
+  gap:10px;
+  min-width:190px;
+  padding:16px 28px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#25d366,#18b458);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 12px 28px rgba(37,211,102,.24);
+  transition:.3s;
+}
+
+.cta-main:hover{
+  transform:translateY(-3px) scale(1.04);
 }
 
 .contact-save{
@@ -137,7 +185,7 @@ margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius
   align-items:center;
   justify-content:center;
   gap:10px;
-  margin-top:18px;
+  min-width:220px;
   padding:16px 28px;
   border-radius:999px;
   background:linear-gradient(135deg,#ffffff,#ffd7ea);
@@ -177,15 +225,14 @@ footer a{color:#fff;text-decoration:none;font-weight:600}
 <h1>Mango 🥭</h1>
 <div class="tag">Belleza • Lifestyle • Cuidado personal</div>
 
-<div class="buttons">
+<div class="buttons buttons-top">
 <a href="https://www.instagram.com/majo.revelogo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
 <a href="https://www.tiktok.com/@majo.revelogo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-<a href="https://wa.me/573122473777" target="_blank"><i class="fab fa-whatsapp"></i> Contacto</a>
+<a href="mailto:mj.revelogo@gmail.com" target="_blank"><i class="fa fa-envelope"></i> Email</a>
 </div>
 
-<div class="social">
-<a href="mailto:mj.revelogo@gmail.com"><i class="fa fa-envelope"></i></a>
-<a href="#" class="contact-save" onclick="vcard(); return false;"><i class="fa fa-address-card"></i> Guarda mi contacto</a>
+<div class="buttons buttons-bottom">
+<a class="btn-whatsapp" href="https://wa.me/573122473777" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </div>
 </div>
 </div>
@@ -216,7 +263,10 @@ Disponible para colaboraciones y publicidad 💌
 
 <section class="cta">
 <h2>Trabajemos juntos 💌</h2>
-<a href="https://wa.me/573122473777">Contáctame</a>
+<div class="cta-actions">
+  <a class="cta-main" href="https://wa.me/573122473777" target="_blank"><i class="fab fa-whatsapp"></i> Contáctame</a>
+  <a class="contact-save" href="#" onclick="vcard(); return false;"><i class="fa fa-address-card"></i> Guarda mi contacto</a>
+</div>
 </section>
 
 <footer>
@@ -236,4 +286,3 @@ link.click();
 
 </body>
 </html>
-
