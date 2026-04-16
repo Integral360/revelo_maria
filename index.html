@@ -354,11 +354,17 @@ Powered by <a href="https://integral360.com.co" target="_blank">Integral360</a>
 
 <script>
 function vcard(){
-const v=`BEGIN:VCARD\nFN:María José Revelo Goyes\nTEL:3122473777\nEMAIL:mj.revelogo@gmail.com\nEND:VCARD`;
-const blob=new Blob([v],{type:'text/vcard'});
-const link=document.createElement('a');
-link.href=URL.createObjectURL(blob);
-link.download='contacto.vcf';
+const v = `BEGIN:VCARD
+VERSION:3.0
+N:Revelo Goyes;María José;;;
+FN:María José Revelo Goyes
+TEL;TYPE=CELL:3122473777
+EMAIL;TYPE=INTERNET:mj.revelogo@gmail.com
+END:VCARD`;
+const blob = new Blob([v], {type:'text/vcard'});
+const link = document.createElement('a');
+link.href = URL.createObjectURL(blob);
+link.download = 'contacto.vcf';
 link.click();
 }
 </script>
