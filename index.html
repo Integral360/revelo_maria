@@ -3,23 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>María José “Mango” Revelo</title>
+<title>Mango 🥭 | Influencer Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#000;
-color:#fff;
-overflow-x:hidden;
-}
+body{margin:0;font-family:'Poppins',sans-serif;background:#050505;color:#fff;overflow-x:hidden}
 
-/* HERO */
+/* HERO PREMIUM */
 .hero{
 height:100vh;
-background:url('foto1.jpeg') center/cover fixed;
+background:url('foto1.jpeg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -30,186 +24,135 @@ position:relative;
 .hero::after{
 content:"";
 position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.55);
+inset:0;
+background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(0,0,0,.85));
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-}
+.hero-content{position:relative;z-index:2}
 
-.profile-img{
-width:140px;
-height:140px;
-border-radius:50%;
-border:4px solid #fff;
-object-fit:cover;
-margin-bottom:15px;
-animation:float 4s ease-in-out infinite;
+.profile{
+width:160px;height:160px;border-radius:50%;
+object-fit:cover;border:4px solid #fff;
+box-shadow:0 0 40px rgba(255,62,165,.6);
+animation:float 4s infinite;
 }
 
 @keyframes float{
-0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);} }
-
-.hero h1{
-font-size:2.8em;
-margin:10px 0;
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
 }
 
-.hero p{
-opacity:.85;
-}
+h1{font-size:3em;margin:15px 0}
+
+.tag{opacity:.85;font-size:1.1em}
 
 /* BOTONES */
-.btns{
-margin-top:20px;
-}
-
-.btn{
-display:inline-block;
-margin:8px;
-padding:12px 20px;
+.buttons a{
+display:inline-block;margin:10px;padding:14px 25px;
 border-radius:30px;
-background:#ff3ea5;
-color:#fff;
-text-decoration:none;
+background:linear-gradient(135deg,#ff3ea5,#ff7a59);
+color:#fff;text-decoration:none;
+font-weight:600;
 transition:.3s;
 }
 
-.btn:hover{
-transform:scale(1.05);
-background:#ff1f8a;
-}
+.buttons a:hover{transform:scale(1.08)}
 
-/* SOCIAL */
-.social{
-margin-top:20px;
-}
-
+/* SOCIAL ICONS */
 .social a{
-margin:8px;
-font-size:20px;
-color:#fff;
-background:#111;
-padding:12px;
-border-radius:50%;
-transition:.3s;
+margin:10px;font-size:20px;color:#fff;background:#111;padding:12px;border-radius:50%;transition:.3s}
+
+.social a:hover{background:#ff3ea5;transform:translateY(-5px)}
+
+/* BIO */
+.bio{padding:60px 20px;text-align:center;max-width:800px;margin:auto;font-size:1.1em;line-height:1.8}
+
+/* GALERIA PREMIUM */
+.slider{overflow:hidden}
+.track{display:flex;gap:15px;animation:scroll 30s linear infinite}
+
+.track img{
+width:250px;height:350px;object-fit:cover;border-radius:20px;
+transition:.4s;animation:zoom 8s infinite alternate;
 }
 
-.social a:hover{
-background:#ff3ea5;
-}
+.track img:hover{transform:scale(1.12)}
 
-/* GALERIA PRO */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:12px;
-padding:30px;
-}
-
-.gallery img{
-width:100%;
-height:260px;
-object-fit:cover;
-border-radius:15px;
-animation:zoom 10s infinite alternate;
-transition:.5s;
-}
-
-.gallery img:hover{
-transform:scale(1.15);
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
 }
 
 @keyframes zoom{
-from{transform:scale(1);}to{transform:scale(1.1);} }
+0%{transform:scale(1)}
+100%{transform:scale(1.1)}
+}
 
 /* CTA */
-.cta{
-text-align:center;
-padding:40px;
-}
+.cta{text-align:center;padding:60px}
 
-/* FOOTER */
+.cta a{
+padding:15px 35px;border-radius:30px;background:#ff3ea5;color:#fff;text-decoration:none}
+
+/* FOOTER PREMIUM */
 footer{
-text-align:center;
-padding:20px;
-font-size:12px;
-opacity:.6;
-}
+text-align:center;padding:20px;font-size:13px;opacity:.7}
+
+footer a{color:#fff;text-decoration:none;font-weight:600}
+
 </style>
 </head>
 
 <body>
 
-<!-- HERO ULTRA -->
 <div class="hero">
 <div class="hero-content">
-<img src="foto1.jpeg" class="profile-img">
-<h1>María José “Mango” 🥭</h1>
-<p>Belleza • Lifestyle • Cuidado personal</p>
+<img src="foto1.jpeg" class="profile">
+<h1>Mango 🥭</h1>
+<div class="tag">Belleza • Lifestyle • Cuidado personal</div>
 
-<div class="btns">
-<a class="btn" href="https://www.instagram.com/majo.revelogo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-<a class="btn" href="https://www.tiktok.com/@majo.revelogo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-<a class="btn" href="https://wa.me/573122473777" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<div class="buttons">
+<a href="https://www.instagram.com/majo.revelogo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="https://www.tiktok.com/@majo.revelogo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+<a href="https://wa.me/573122473777" target="_blank"><i class="fab fa-whatsapp"></i> Contacto</a>
 </div>
 
 <div class="social">
 <a href="mailto:mj.revelogo@gmail.com"><i class="fa fa-envelope"></i></a>
-<a href="#" onclick="downloadVCard()"><i class="fa fa-address-card"></i></a>
+<a href="#" onclick="vcard()"><i class="fa fa-address-card"></i></a>
 </div>
 </div>
 </div>
 
-<!-- BIO -->
-<section class="cta">
-<p>
+<section class="bio">
 Hola, soy María José, me dicen Mango 🥭<br><br>
 Soy creadora de contenido en IG y TikTok enfocada en belleza, lifestyle y cuidado personal.<br><br>
 Disponible para colaboraciones y publicidad 💌
-</p>
 </section>
 
-<!-- GALERIA -->
-<section class="gallery">
-<img src="foto2.jpeg">
-<img src="foto3.jpeg">
-<img src="foto4.jpeg">
-<img src="foto5.jpeg">
-<img src="foto6.jpeg">
-<img src="foto7.jpeg">
-<img src="foto8.jpeg">
-<img src="foto9.jpeg">
-<img src="foto10.jpeg">
-<img src="foto11.jpeg">
+<section class="slider">
+<div class="track">
+<img src="foto2.jpeg"><img src="foto3.jpeg"><img src="foto4.jpeg"><img src="foto5.jpeg"><img src="foto6.jpeg"><img src="foto7.jpeg"><img src="foto8.jpeg"><img src="foto9.jpeg"><img src="foto10.jpeg"><img src="foto11.jpeg">
+<img src="foto2.jpeg"><img src="foto3.jpeg"><img src="foto4.jpeg"><img src="foto5.jpeg"><img src="foto6.jpeg"><img src="foto7.jpeg"><img src="foto8.jpeg"><img src="foto9.jpeg"><img src="foto10.jpeg"><img src="foto11.jpeg">
+</div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="cta">
 <h2>Trabajemos juntos 💌</h2>
-<a class="btn" href="https://wa.me/573122473777">Contáctame</a>
+<a href="https://wa.me/573122473777">Contáctame</a>
 </section>
 
 <footer>
-Powered by Integral360
+Powered by <a href="https://integral360.com.co" target="_blank">Integral360</a>
 </footer>
 
 <script>
-function downloadVCard(){
-const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:María José Revelo Goyes
-TEL:3122473777
-EMAIL:mj.revelogo@gmail.com
-END:VCARD`;
-
-const blob = new Blob([vcard], { type: 'text/vcard' });
-const link = document.createElement('a');
-link.href = URL.createObjectURL(blob);
-link.download = 'contacto.vcf';
+function vcard(){
+const v=`BEGIN:VCARD\nFN:María José Revelo Goyes\nTEL:3122473777\nEMAIL:mj.revelogo@gmail.com\nEND:VCARD`;
+const blob=new Blob([v],{type:'text/vcard'});
+const link=document.createElement('a');
+link.href=URL.createObjectURL(blob);
+link.download='contacto.vcf';
 link.click();
 }
 </script>
