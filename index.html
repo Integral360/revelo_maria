@@ -1,93 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>En Construcción</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María José “Mango” Revelo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
 
-    .container {
-      max-width: 400px;
-      padding: 30px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-    }
+/* HERO */
+.hero{
+height:100vh;
+background:url('foto1.jpeg') center/cover fixed;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
 
-    .logo {
-      width: 100px;
-      margin-bottom: 20px;
-    }
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
 
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #FFD700;
-    }
+.hero-content{
+position:relative;
+z-index:2;
+}
 
-    p {
-      font-size: 16px;
-      color: #cccccc;
-      margin-bottom: 25px;
-    }
+.profile-img{
+width:140px;
+height:140px;
+border-radius:50%;
+border:4px solid #fff;
+object-fit:cover;
+margin-bottom:15px;
+animation:float 4s ease-in-out infinite;
+}
 
-    .loader {
-      border: 4px solid rgba(255,255,255,0.1);
-      border-top: 4px solid #FFD700;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 0 auto;
-    }
+@keyframes float{
+0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);} }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+.hero h1{
+font-size:2.8em;
+margin:10px 0;
+}
 
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #888;
-    }
-  </style>
+.hero p{
+opacity:.85;
+}
+
+/* BOTONES */
+.btns{
+margin-top:20px;
+}
+
+.btn{
+display:inline-block;
+margin:8px;
+padding:12px 20px;
+border-radius:30px;
+background:#ff3ea5;
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#ff1f8a;
+}
+
+/* SOCIAL */
+.social{
+margin-top:20px;
+}
+
+.social a{
+margin:8px;
+font-size:20px;
+color:#fff;
+background:#111;
+padding:12px;
+border-radius:50%;
+transition:.3s;
+}
+
+.social a:hover{
+background:#ff3ea5;
+}
+
+/* GALERIA PRO */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
+padding:30px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:15px;
+animation:zoom 10s infinite alternate;
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.15);
+}
+
+@keyframes zoom{
+from{transform:scale(1);}to{transform:scale(1.1);} }
+
+/* CTA */
+.cta{
+text-align:center;
+padding:40px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+font-size:12px;
+opacity:.6;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    
-    <!-- Si tienes logo, descomenta esta línea -->
-    <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+<!-- HERO ULTRA -->
+<div class="hero">
+<div class="hero-content">
+<img src="foto1.jpeg" class="profile-img">
+<h1>María José “Mango” 🥭</h1>
+<p>Belleza • Lifestyle • Cuidado personal</p>
 
-    <h1>Landing en Construcción</h1>
+<div class="btns">
+<a class="btn" href="https://www.instagram.com/majo.revelogo" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+<a class="btn" href="https://www.tiktok.com/@majo.revelogo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+<a class="btn" href="https://wa.me/573122473777" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
 
-    <p>
-      Estamos preparando algo increíble para ti.<br>
-      Muy pronto podrás acceder a toda la información.
-    </p>
+<div class="social">
+<a href="mailto:mj.revelogo@gmail.com"><i class="fa fa-envelope"></i></a>
+<a href="#" onclick="downloadVCard()"><i class="fa fa-address-card"></i></a>
+</div>
+</div>
+</div>
 
-    <div class="loader"></div>
+<!-- BIO -->
+<section class="cta">
+<p>
+Hola, soy María José, me dicen Mango 🥭<br><br>
+Soy creadora de contenido en IG y TikTok enfocada en belleza, lifestyle y cuidado personal.<br><br>
+Disponible para colaboraciones y publicidad 💌
+</p>
+</section>
 
-    <div class="footer">
-      © 2026 • Powered by Integral360
-    </div>
+<!-- GALERIA -->
+<section class="gallery">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+<img src="foto4.jpeg">
+<img src="foto5.jpeg">
+<img src="foto6.jpeg">
+<img src="foto7.jpeg">
+<img src="foto8.jpeg">
+<img src="foto9.jpeg">
+<img src="foto10.jpeg">
+<img src="foto11.jpeg">
+</section>
 
-  </div>
+<!-- CTA FINAL -->
+<section class="cta">
+<h2>Trabajemos juntos 💌</h2>
+<a class="btn" href="https://wa.me/573122473777">Contáctame</a>
+</section>
+
+<footer>
+Powered by Integral360
+</footer>
+
+<script>
+function downloadVCard(){
+const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:María José Revelo Goyes
+TEL:3122473777
+EMAIL:mj.revelogo@gmail.com
+END:VCARD`;
+
+const blob = new Blob([vcard], { type: 'text/vcard' });
+const link = document.createElement('a');
+link.href = URL.createObjectURL(blob);
+link.download = 'contacto.vcf';
+link.click();
+}
+</script>
 
 </body>
 </html>
+
